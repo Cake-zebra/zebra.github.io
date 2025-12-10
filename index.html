@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+e<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -39,12 +39,13 @@
       const params = new URLSearchParams(window.location.search);
       const text = params.get('text');
       if (text) {
-        document.getElementById('inputText').value = text;
+        document.getElementById('inputText').value = decodeURIComponents(text);
       }
     });
   </script>
 </body>
 </html>
+
 
 
 
