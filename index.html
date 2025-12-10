@@ -39,9 +39,10 @@
     const params = new URLSearchParams(window.location.search);
     const sampleText = params.get("text");
     if (sampleText) {
-      document.getElementById("inputText").value = decodeURIComponent(sampleText);
+      document.getElementById("inputText").value = sampleText;
     }
   </script>
 </body>
 </html>
+
 
