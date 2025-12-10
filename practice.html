@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transcription Practice</title>
+  <!-- Spanish flag favicon -->
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Title bar -->
+  <header>
+    <h1>Transcription Practice</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Practice</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Samples</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Input text container with voice reader -->
+  <section class="input-container">
+    <textarea id="inputText" placeholder="Enter text to be read aloud..."></textarea>
+    <button id="playPauseBtn">▶ Play</button>
+  </section>
+
+  <!-- Transcription area -->
+  <section class="transcription-container">
+    <textarea id="transcriptionArea" placeholder="Type here as you listen..."></textarea>
+    <div id="keyboard"></div>
+  </section>
+
+  <script src="script.js"></script>
+  <script>
+    // Pre-fill inputText if ?text= is in the URL
+    const params = new URLSearchParams(window.location.search);
+    const sampleText = params.get("text");
+    if (sampleText) {
+      document.getElementById("inputText").value = decodeURIComponent(sampleText);
+    }
+  </script>
+</body>
+</html>
