@@ -35,15 +35,17 @@
 
   <script src="script.js"></script>
   <script>
-    // Pre-fill inputText if ?text= is in the URL
-    const params = new URLSearchParams(window.location.search);
-    const sampleText = params.get("text");
-    if (sampleText) {
-      document.getElementById("inputText").value = decodeURIComponent(sampleText);
-    }
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const text = params.get('text');
+      if (text) {
+        document.getElementById('inputText').value = text;
+      }
+    });
   </script>
 </body>
 </html>
+
 
 
 
