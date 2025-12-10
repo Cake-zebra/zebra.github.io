@@ -39,12 +39,13 @@ e<!DOCTYPE html>
       const params = new URLSearchParams(window.location.search);
       const text = params.get('text');
       if (text) {
-        document.getElementById('inputText').value = decodeURIComponents(text);
+        document.getElementById('inputText').value = decodeURIComponent(text);
       }
     });
   </script>
 </body>
 </html>
+
 
 
 
